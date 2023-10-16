@@ -351,6 +351,21 @@ nav .fas{
     background-image: url('images/bamboo.jpg');
 }
 
+#sidemenu {
+    list-style: none;
+    padding: 0;
+}
+
+#sidemenu li {
+    margin: 10px 0;
+}
+
+#sidemenu a {
+    text-decoration: none;
+    color: #fffefe;
+}
+
+
 @media only screen and (max-width: 600px){
 
     #header{
