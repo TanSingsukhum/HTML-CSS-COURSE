@@ -251,25 +251,13 @@ nav ul li a:hover::after {
     position: relative;
 }
 
-
-.social-icon {
-    margin-top: 50px;
+.social-icons {
+    margin-top: 3111px;
     
 }
 
-.social-icon a {
-    text-decoration: none;
-    font-size: 40px; /* Adjust the font size as needed */
-    margin-right: 5px;
-    color: #f1e8e8 !important; /* Use !important to ensure the color is applied */
-    display: inline-block;
-    transition: transform 0.5s, color 0.5s;
-}
-
-/* Change the color of social icons on hover */
-.social-icon a:hover {
-    color: #ff004f;
-    transform: translateY(-5px);
+.socail-icons a i {
+    color: rgb(27, 248, 27); /* Change this color to the one you desire */
 }
 
 .btn.btn2 {
@@ -316,7 +304,7 @@ form .btn2{
 .copyright{
     width: 100%;
     text-align: center;
-    padding: 2px 0;
+    padding: 10px 0;
     background: #232929;
     font-weight: 300;
     margin-top: 20;
@@ -356,6 +344,7 @@ nav .fas{
     padding: 0;
 }
 
+
 #sidemenu li {
     margin: 10px 0;
 }
@@ -365,75 +354,70 @@ nav .fas{
     color: #fffefe;
 }
 
+/* Style when the side menu is open */
+#sidemenu.open {
+    right: 0;
+}
 
-@media only screen and (max-width: 600px){
-
-    #header{
-        background-image: url(images/darkleaf.jpg);
-    }
-    #Contact{
-        background-image: url(images/green.jpg);
-    }
-    #Portfolio{
-        background-image: url(images/leaf.jpg);
-    }
-    #about {
-        background-image: url(images/bamboo.jpg); 
-    }
-
+/* For small screens */
+@media only screen and (max-width: 600px) {
+    /* Header styles for small screens */
     #header {
-        background-image: url('images/mobile-header.jpg'); /* Change to mobile background image */
+        background-image: url('images/mobile-header.jpg');
     }
 
-    #Contact {
-        background-image: url('images/mobile-contact.jpg'); /* Change to mobile background image */
-    }
-
-    #Portfolio {
-        background-image: url('images/mobile-portfolio.jpg'); /* Change to mobile background image */
-    }
-
+    /* About section styles for small screens */
     #about {
-        background-image: url('images/mobile-about.jpg'); /* Change to mobile background image */
-    }
-    .container{
-        margin-top: 100%;
-        font-size: 16px;
+        background-image: url('images/mobile-about.jpg');
     }
 
-    .header-text h1{
-        font-size: 30px;
+    /* Portfolio section styles for small screens */
+    #portfolio-and-project {
+        background-image: url('images/mobile-portfolio.jpg');
     }
 
-    nav .fas{
+    /* Contact section styles for small screens */
+    #Contact {
+        background-image: url('images/mobile-contact.jpg');
+    }
+
+    /* Reset the container margin and font size */
+    .container {
+        margin-top: 0;
+        font-size: 14px; /* Adjust as needed */
+    }
+
+    /* Adjust header text size */
+    .header-text h1 {
+        font-size: 24px; /* Adjust as needed */
+    }
+
+    /* Show the navigation icon and adjust its size */
+    nav .fas {
         display: block;
-        font-size: 25px;
+        font-size: 30px; /* Adjust as needed */
     }
 
-    nav ul{
-        background: #10e0d6;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
-
+    /* Adjust the navigation menu */
+    nav ul {
+        right: 0;
     }
 
-    nav ul li{
-        display: block;
-        margin: 25px;
+    /* Reset navigation menu list items margin */
+    nav ul li {
+        margin: 0;
+    }
+    #sidemenu {
+        width: 80%; /* Adjust the width for small screens */
     }
 
-    nav ul .fas{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
+    #sidemenu.open {
+        width: 80%; /* Adjust the width when the menu is open on small screens */
     }
+}
 
-
+#msg{
+    color: #61b752;
+    margin-top: -20px;
+    display: block;
 }

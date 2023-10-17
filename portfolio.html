@@ -7,6 +7,8 @@
     <title>Personal Portfolio Website - Easy Tutorial</title>
     <link rel="stylesheet" href="portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    
 
 </head>
 <body>
@@ -52,8 +54,11 @@
                     It was a tough year, but I managed to save up enough to transfer to my dream college, Oregon State University. 
                     I chose OSU because of its strong computer science program, inspired by a successful friend and my high school programming teacher's recommendation. 
                     Plus, the bike-friendly environment at OSU makes me even happier, as I love biking.
+
+                    My goal is to do a research related to Human Computer Interaction that focus on how to create a create and useful UX/UI. I'm also looking for to make more project and learn more different languages.
+
+                    This portfolio website is will be improve in the future and will be more stuff to add (: Thank you for all support!
                     
-                    Currently, I have learned C++, HTML, and CSS. And much more in the future (:
                 </p>
             </div>
         </div>
@@ -70,7 +75,7 @@
             <div class="work-list">
                 <!-- Your portfolio content here -->
                 <div class="resume">
-                    <img src="images/ThanaphonSingsukhumResume.png" alt="Resume" style="max-width: 100%; height: auto;">
+                    <img src="images/newresume.png" alt="Resume" style="max-width: 100%; height: auto;">
                 </div>
             </div>
         </div>
@@ -115,22 +120,23 @@
                 <p> <i class ="fas fa-paper-plane" ></i> tsings02642@gmail.com</p>
                 <p><i class ="fas fa-phone-square-alt" ></i> (503)-875-1533</p>
                 <div class = "socail-icons">
-                    <a href="https://www.instagram.com/tanx_thanaphon/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="https://www.linkedin.com/in/thanaphon-singsukhum-98b074271/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://www.instagram.com/tanx_thanaphon/" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
+                    <a href="https://www.linkedin.com/in/thanaphon-singsukhum-98b074271/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+                    <a href ="https://github.com/TanSingsukhum" ><i class="fab fa-github fa-3x"></i></a>
                 </div>
                 
             </div>
         </div class ="contact-right"></div>
-            <form>
-                <input type="text" name = "Name" placeholder="Your Name" required>
-                <input type ="email" name ="email" placeholder="Your Email" required>
+            <form name = "submit-to-google-sheet">
+                <input type="Name" name = "Name" placeholder="Your Name" required>
+                <input type ="Email" name ="Email" placeholder="Your Email" required>
                 <textarea name = "Message" rows = "6" placeholder="Your Message"></textarea> 
                 <button type ="submit" class= "btn btn2">Submit</button>
             </form>
+            <span id="msg"></span>
     </div>
 </div>
 </div>
-
 
 
 
@@ -139,19 +145,20 @@
 </div>
 
 <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw04dvGUkoITyvH6cbDZvgHUh4B2MLuJkCkuD190GoarbDJr9-HFXuoKgO4o2n1Emwxvg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
 
-var sidemenu = document.getElementById("sidemenu");
-
-function openmenu(){
-    sidemenu.style.right = "0";
-}
-
-function closemenu(){
-    sidemenu.style.right = "-200";
-}
-
-
-</script>
-
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+        msg.innerHTML = ""}, 3000)
+        form.reset()
+    })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
