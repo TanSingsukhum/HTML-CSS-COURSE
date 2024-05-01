@@ -1,18 +1,42 @@
+/* Apply background to html and body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Header Styles */
 #header {
-    background-color: #add8e6; /* Light blue background color */
-    color: #000; /* Black text color */
     padding: 20px; /* Add some padding to the header */
     text-align: center; /* Center align the text */
     /* Background image styles */
-    background-image: url('images/tree.jpg'); /* Replace 'images/tree.jpg' with the actual path to your image */
-    background-size: 100% auto; /* Set the width to cover the entire width of the header and auto for height */
-    background-repeat: no-repeat; /* Ensure the background image is not repeated */
-    background-position: center; /* Center the background image */
+    background-image: url('images/chill.gif'); /* Adjust the path to your GIF inside the "images" folder */
+    background-size: cover; /* Cover the entire header area */
+    animation: slide 10s linear infinite; /* Add animation to the GIF */
+    height: 100vh; /* Set header height to full viewport height */
+}
+.header-text {
+    font-family: 'Courier New', Courier, monospace; /* Use a monospace font for pixel-like appearance */
+    color: white;
+    text-shadow: 1px 1px 1px #000000, 
+                 2px 2px 2px #000;
+    font-size: 14px; /* Adjust font size as needed */
+    letter-spacing: 1px; /* Add letter spacing for better readability */
+  }
+
+
+/* Add hover effect for the brand */
+.sidemenu1  :hover{
+    color: #dbdad6; /* Change text color on hover */
+    
+}
+@keyframes slide {
+    0% { background-position: 0 0; } /* Starting position */
+    100% { background-position: 100% 100%; } /* Ending position */
 }
 
-/* Update your CSS */
+/* Selfie Container Styles */
 .selfie-container {
-    background-color: #add8e6; /* Light blue background color */
     padding: 5px; /* Add padding to create space around the image */
     text-align: center; /* Center align the image */
 }
@@ -24,19 +48,50 @@
     vertical-align: middle; /* Vertically align the image */
 }
 
-#sidemenu {
-    position: fixed; /* Fixed positioning */
-    top: 20px; /* Adjust the distance from the top */
-    right: 20px; /* Adjust the distance from the right */
-    padding: 10px; /* Add some padding to the menu */
-    z-index: 999; /* Ensure menu appears above other content */
+/* Side Menu Styles */
+#sidemenu2 {
+    text-shadow: 1px 1px 1px #000, 
+    2px 2px 2px #000, 
+    3px 3px 3px #000; /* Adding multiple shadows for pixelated effect */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    z-index: 999;
+    font-family: 'Courier New', Courier, monospace; /* Use a monospace font for pixel-like appearance */
 }
 
-#sidemenu li {
-    margin-bottom: 10px; /* Add space between menu items */
+#sidemenu2 ul {
+    list-style-type: none; /* Remove the default list item markers */
+    padding-left: 0; /* Remove default padding for unordered list */
 }
 
-#sidemenu a {
-    color: #000; /* Black text color */
-    text-decoration: none; /* Remove underline from links */
+#sidemenu2 li {
+    margin-bottom: 10px;
+    list-style-type: none; /* Remove the list item marker */
+}
+
+#sidemenu2 a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#sidemenu2 li {
+    border: 1px solid #03eaff; /* Add a black border to each menu item */
+    padding: 5px; /* Add padding to create space around text */
+    box-shadow: 2px 2px 0 #29a6ff; /* Add a shadow to create a pixel-like appearance */
+}
+
+/* Add styles for your custom section */
+#custom-section {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0; /* Optional: Add padding for better appearance */
+}
+
+.license-button {
+    color: #f9f9f9; /* Optional: Set text color */
+    text-decoration: none; /* Optional: Remove underline */
 }
